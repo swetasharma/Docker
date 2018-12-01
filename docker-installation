@@ -1,0 +1,36 @@
+sudo yum searh docker
+we have to create a repository for our system to pull odcker from
+cd /etc/yum.repo.d/
+create a docker.repo
+sudo vim docker.repo
+[dockerrepo]
+name=Docker Repository
+baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
+enabled=1
+gpgcheck=1
+gpgkey=https://yum.dockerproject.org/gpg
+save your system
+yum update to pull in the latest updates
+sudo yum update we are installing any updates we have
+sudo yum install docker-engine
+start docker service
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo systemctl status docker to see that everything is running
+docker images - what images are installed on your system
+cannor connect to docker daemon
+sudo docker images
+cd .var/run
+ls -al dock*
+by defalut docker is creating a file in the var run directory its own by the docker group call docker.sock
+if you are not a member of that group or you are not root by deflault you don have access to docker daemon making sure onlyauthorised members
+can access to docker
+implementation requires root access to run docker
+we gonna add ourselves to the docker group
+sudo usermod test -g docker
+exit - logout
+log back in
+docker images
+we can now connect successfully to docker daemon
+
+
