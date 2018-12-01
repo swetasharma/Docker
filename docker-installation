@@ -32,5 +32,31 @@ exit - logout
 log back in
 docker images
 we can now connect successfully to docker daemon
+docker run hello-world
+docker version
+docker info
+
+var/lib/docker is where all of our images and contaniners goinf to live
+df -h
+sudo su -
+cd /var/lib/docker
+ll
+cd containers
+ll
+cd 121548787874 - directory that has information about containers
+docker ps - currently running containers
+docker ps -a - see containers we have run
+ cd ..
+cd ..
+cd image/
+ll
+cd devicemapper/
+cd imagedb/ ll
+cd content/ ll
+cd sha256/ ll
+docker images
+
+
+
 
 
