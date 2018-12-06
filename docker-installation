@@ -57,6 +57,20 @@ cd sha256/ ll
 docker images
 
 
+Lets pull an image:
+https://hub.docker.com/
+whoami
+docker pull ubuntu:xenial
+docker images
+docker run -i -t ubuntu:xenial /bin/bash - this will attach you immediately to the container. it will attach as root user to the container
+ps aux
+docker restart container ip/ container id or container name
+you simply restarted the conatiner yo have not loggin to that container
+docker ps
+docker inspect ubuntu:xenial - if you want to get more information about this container
+docker attach containerName - you will be back to your container
+
+
 
 
 
